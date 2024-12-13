@@ -1,0 +1,12 @@
+{
+    "android": {
+      "release": {
+        "keystore": "C:/Users/ferna/Downloads/sos-vet/sos-vet/android/app/debug.keystore",
+        "storePassword": "android",
+        "alias": "androiddebugkey",
+        "password": "android",
+        "keystoreType": ""
+      }
+    }
+  }
+  

@@ -1,0 +1,88 @@
+/* Colores globales */
+:root {
+    --ion-color-primary: #004aad; /* Azul profesional */
+    --ion-color-secondary: #f4a261; /* Naranja claro */
+    --ion-color-tertiary: #e76f51; /* Rojo suave */
+    --ion-color-light: #f6f6f6;
+    --ion-color-dark: #1a202c;
+  }
+  
+  /* Encabezado */
+  ion-toolbar {
+    --background: var(--ion-color-primary);
+    --color: white;
+  }
+  
+  /* Contenedor del botón de acción */
+  .action-container {
+    text-align: center;
+    padding: 16px;
+  }
+  
+  /* Spinner */
+  .spinner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+  }
+  
+  .spinner-container p {
+    color: var(--ion-color-dark);
+    margin-top: 8px;
+  }
+  
+  /* Lista de veterinarias */
+  ion-card {
+    margin: 12px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgb(255, 255, 255);
+  }
+  
+  ion-card-title {
+    font-size: 1.2rem;
+    color: var(--ion-color-primary);
+  }
+  
+  .subtitle {
+    font-size: 0.9rem;
+    color: var(--ion-color-dark);
+  }
+  
+  ion-card-content p {
+    font-size: 0.9rem;
+    color: var(--ion-color-dark);
+  }
+  
+  .no-results {
+    text-align: center;
+    color: var(--ion-color-dark);
+    margin-top: 20px;
+    font-size: 1.1rem;
+  }
+
+
+  ion-card-title {
+    font-size: 1.2rem;
+    color: var(--ion-color-primary);
+  }
+  
+  .subtitle {
+    font-size: 0.9rem;
+    color: var(--ion-color-dark);
+  }
+  
+  .distance {
+    color: red;
+  }
+  
+  
+  
+  
+  ion-button {
+    --background: var(--ion-color-primary);
+    --color: white;
+    --border-radius: 5px;
+  }
+  

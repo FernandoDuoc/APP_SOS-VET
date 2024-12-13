@@ -1,0 +1,7 @@
+{
+  "name": "SOS VET",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

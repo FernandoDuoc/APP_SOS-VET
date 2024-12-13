@@ -1,0 +1,55 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>SOS VET</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">SOS VET</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="action-container">
+    <ion-button expand="block" (click)="obtenerUbicacionActual()" color="success">
+      <ion-icon slot="start" name="search-outline"></ion-icon>
+      Buscar Vets Cercanas
+    </ion-button>
+  </div>
+
+  <div *ngIf="cargando" class="spinner-container">
+    <ion-spinner name="crescent"></ion-spinner>
+    <p>Cargando veterinarias cercanas...</p>
+  </div>
+
+  <ion-list *ngIf="veterinariasCercanas.length > 0">
+    <ion-card *ngFor="let veterinaria of veterinariasCercanas">
+      <ion-card-header>
+        <ion-card-title>{{ veterinaria.name }}</ion-card-title>
+        <p class="subtitle">{{ veterinaria.vicinity }}</p>
+        <p class="distance"><strong>Distancia:</strong> {{ veterinaria.distancia }}</p>
+      </ion-card-header>
+      <ion-card-content>
+        <p>
+          <strong>Estado: </strong>
+          {{ veterinaria.opening_hours?.open_now ? 'Abierto ahora' : 'Cerrado ahora' }}
+        </p>
+        <ion-button
+          expand="block"
+          fill="solid"
+          color="primary"
+          (click)="abrirGoogleMaps(veterinaria.geometry.location.lat, veterinaria.geometry.location.lng)"
+        >
+          <ion-icon slot="start" name="map-outline"></ion-icon>
+          Ver ruta
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+  
+
+  <div *ngIf="!cargando && veterinariasCercanas.length === 0">
+    <p>No se encontraron veterinarias cercanas.</p>
+  </div>
+</ion-content>
